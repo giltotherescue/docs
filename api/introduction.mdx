@@ -1,0 +1,252 @@
+---
+title: 'API Introduction'
+description: 'Programmatically create scripts and manage channels with the Subscribr API'
+---
+
+<Note>
+  **API Access**: The Subscribr API is currently available for Automation and Scale plans. Contact support at hello@subscribr.ai for API access.
+</Note>
+
+## Welcome to the Subscribr API
+
+The Subscribr API allows you to programmatically:
+- Create and manage YouTube scripts
+- Configure channels and voice profiles
+- Access Intel data and analytics
+- Manage team resources
+- Integrate with your content workflow
+
+## Base URL
+
+All API requests should be made to:
+
+```
+https://subscribr.ai/api/v1
+```
+
+## Authentication
+
+The Subscribr API uses API keys for authentication. Include your API key in the `Authorization` header:
+
+```bash
+Authorization: Bearer YOUR_API_KEY
+```
+
+### Getting Your API Key
+
+<Steps>
+  <Step title="Navigate to Settings">
+    Go to your [Account Settings](https://subscribr.ai/settings)
+  </Step>
+  <Step title="Select API Access">
+    Click on the "API Access" tab
+  </Step>
+  <Step title="Generate API Key">
+    Click "Generate New API Key" and store it securely
+  </Step>
+</Steps>
+
+<Warning>
+  **Security Note**: Treat your API key like a password. Never expose it in client-side code or public repositories.
+</Warning>
+
+## Rate Limits
+
+API rate limits vary by plan:
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Plan</TableHead>
+      <TableHead>Requests/Minute</TableHead>
+      <TableHead>Requests/Hour</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>Automation</TableCell>
+      <TableCell>60</TableCell>
+      <TableCell>1,000</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Scale</TableCell>
+      <TableCell>120</TableCell>
+      <TableCell>5,000</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Enterprise</TableCell>
+      <TableCell>Custom</TableCell>
+      <TableCell>Custom</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Response Format
+
+All API responses are returned in JSON format:
+
+```json
+{
+  "success": true,
+  "data": {
+    // Response data
+  },
+  "meta": {
+    "credits_used": 1.2,
+    "credits_remaining": 148.8
+  }
+}
+```
+
+### Error Responses
+
+Error responses include helpful information:
+
+```json
+{
+  "success": false,
+  "error": {
+    "code": "INSUFFICIENT_CREDITS",
+    "message": "Not enough credits to complete this operation",
+    "details": {
+      "required": 1.2,
+      "available": 0.5
+    }
+  }
+}
+```
+
+## Common Error Codes
+
+<AccordionGroup>
+  <Accordion title="Authentication Errors">
+    - `401 UNAUTHORIZED`: Invalid or missing API key
+    - `403 FORBIDDEN`: API access not enabled for your plan
+  </Accordion>
+  <Accordion title="Resource Errors">
+    - `404 NOT_FOUND`: Requested resource doesn't exist
+    - `409 CONFLICT`: Resource already exists
+  </Accordion>
+  <Accordion title="Validation Errors">
+    - `400 BAD_REQUEST`: Invalid request parameters
+    - `422 UNPROCESSABLE_ENTITY`: Request validation failed
+  </Accordion>
+  <Accordion title="Limit Errors">
+    - `429 RATE_LIMITED`: Too many requests
+    - `402 INSUFFICIENT_CREDITS`: Not enough credits
+  </Accordion>
+</AccordionGroup>
+
+## Quick Start Example
+
+Create your first script via API:
+
+<CodeGroup>
+  ```bash cURL
+  curl -X POST https://subscribr.ai/api/v1/scripts \
+    -H "Authorization: Bearer YOUR_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "channel_id": "ch_abc123",
+      "prompt": "Create a 10-minute tutorial about Python basics",
+      "voice_profile_id": "vp_xyz789"
+    }'
+  ```
+
+  ```javascript Node.js
+  const response = await fetch('https://subscribr.ai/api/v1/scripts', {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer YOUR_API_KEY',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      channel_id: 'ch_abc123',
+      prompt: 'Create a 10-minute tutorial about Python basics',
+      voice_profile_id: 'vp_xyz789'
+    })
+  });
+
+  const script = await response.json();
+  ```
+
+  ```python Python
+  import requests
+
+  response = requests.post(
+    'https://subscribr.ai/api/v1/scripts',
+    headers={
+      'Authorization': 'Bearer YOUR_API_KEY',
+      'Content-Type': 'application/json'
+    },
+    json={
+      'channel_id': 'ch_abc123',
+      'prompt': 'Create a 10-minute tutorial about Python basics',
+      'voice_profile_id': 'vp_xyz789'
+    }
+  )
+
+  script = response.json()
+  ```
+</CodeGroup>
+
+## Webhooks
+
+Subscribe to events in your Subscribr account:
+
+<Card title="Webhook Events" icon="webhook" href="/integrations/webhooks">
+  Learn about available webhook events and payloads
+</Card>
+
+## SDK Libraries
+
+<CardGroup cols={2}>
+  <Card title="Node.js SDK" icon="node-js">
+    Coming soon
+  </Card>
+  <Card title="Python SDK" icon="python">
+    Coming soon
+  </Card>
+  <Card title="PHP SDK" icon="php">
+    Coming soon
+  </Card>
+  <Card title="Ruby SDK" icon="gem">
+    Coming soon
+  </Card>
+</CardGroup>
+
+## API Changelog
+
+<Steps>
+  <Step title="v1.0 - Initial Release">
+    **December 2024**
+    - Script creation and management
+    - Channel operations
+    - Basic Intel access
+  </Step>
+  <Step title="v1.1 - Coming Soon">
+    **Q1 2025**
+    - Webhook support
+    - Batch operations
+    - Enhanced Intel endpoints
+  </Step>
+</Steps>
+
+## Need Help?
+
+<CardGroup cols={2}>
+  <Card
+    title="API Support"
+    icon="headset"
+    href="mailto:hello@subscribr.ai"
+  >
+    Contact our API support team
+  </Card>
+  <Card
+    title="API Status"
+    icon="signal"
+    href="https://status.subscribr.ai"
+  >
+    Check API availability
+  </Card>
+</CardGroup>

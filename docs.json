@@ -1,68 +1,150 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Subscribr",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0D9488",
+    "light": "#10B981",
+    "dark": "#047857"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "core-concepts",
+              "first-script",
+              "subscription-plans"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Script Creation",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "script-creation/vibe-scripting",
+              "script-creation/script-bot",
+              "script-creation/canvas-mode",
+              "script-creation/classic-builder",
+              "script-creation/templates",
+              "script-creation/voice-profiles"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Channel Management",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "channels/overview",
+              "channels/creating-channels",
+              "channels/channel-settings",
+              "channels/audience-insights",
+              "channels/voice-configuration"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Research & Intelligence",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "intel/overview",
+              "intel/channel-analysis",
+              "intel/video-analysis",
+              "intel/search-discovery",
+              "intel/outlier-detection",
+              "intel/competitive-intelligence"
+            ]
+          },
+          {
+            "group": "Research Tools",
+            "pages": [
+              "research/overview",
+              "research/ai-powered-research",
+              "research/sidebar-management",
+              "research/file-uploads",
+              "research/youtube-import"
+            ]
+          },
+          {
+            "group": "Team Collaboration",
+            "pages": [
+              "team/overview",
+              "team/user-management",
+              "team/permissions",
+              "team/shared-resources"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Guides",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Content Strategy",
             "pages": [
-              "api-reference/introduction"
+              "guides/youtube-strategy",
+              "guides/content-planning",
+              "guides/audience-targeting",
+              "guides/viral-formulas"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Best Practices",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "guides/scripting-best-practices",
+              "guides/research-workflow",
+              "guides/optimization-tips",
+              "guides/collaboration-workflow"
+            ]
+          },
+          {
+            "group": "Tutorials",
+            "pages": [
+              "tutorials/create-first-channel",
+              "tutorials/write-viral-script",
+              "tutorials/analyze-competitors",
+              "tutorials/remix-content",
+              "tutorials/team-setup"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API & Integrations",
+        "groups": [
+          {
+            "group": "API Reference",
+            "pages": [
+              "api/introduction",
+              "api/authentication",
+              "api/rate-limits"
+            ]
+          },
+          {
+            "group": "Script Endpoints",
+            "pages": [
+              "api/scripts/create",
+              "api/scripts/get",
+              "api/scripts/update",
+              "api/scripts/delete",
+              "api/scripts/export"
+            ]
+          },
+          {
+            "group": "Channel Endpoints",
+            "pages": [
+              "api/channels/create",
+              "api/channels/get",
+              "api/channels/update",
+              "api/channels/delete"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/youtube",
+              "integrations/export-formats",
+              "integrations/webhooks"
             ]
           }
         ]
@@ -71,13 +153,18 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Support",
+          "href": "https://subscribr.ai/support",
+          "icon": "life-ring"
+        },
+        {
+          "anchor": "Community",
+          "href": "https://community.subscribr.ai",
+          "icon": "discord"
         },
         {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "href": "https://subscribr.ai/blog",
           "icon": "newspaper"
         }
       ]
@@ -91,13 +178,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:hello@subscribr.ai"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Launch App",
+      "href": "https://subscribr.ai"
     }
   },
   "contextual": {
@@ -107,16 +194,38 @@
      "chatgpt",
      "claude",
      "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+     "mcp"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/subscribr",
+      "youtube": "https://youtube.com/@subscribr",
+      "linkedin": "https://linkedin.com/company/subscribr"
     }
+  },
+  "search": {
+    "enabled": true,
+    "placeholder": "Search Subscribr docs..."
+  },
+  "analytics": {
+    "plausible": {
+      "domain": "docs.subscribr.ai"
+    }
+  },
+  "seo": {
+    "indexing": true,
+    "title": "Subscribr Documentation | AI-Powered YouTube Script Writing Platform",
+    "description": "Learn how to create viral YouTube scripts in minutes with Subscribr's AI-powered platform. Complete guides for Script Bot, Intel, Remix, and more.",
+    "canonical": "https://docs.subscribr.ai"
+  },
+  "metadata": {
+    "og:site_name": "Subscribr Documentation",
+    "og:type": "website",
+    "twitter:card": "summary_large_image"
+  },
+  "feedback": {
+    "enabled": true,
+    "thumbs": true
   }
 }

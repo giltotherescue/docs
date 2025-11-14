@@ -1,80 +1,257 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: "Quick Start"
+description: "Create your first viral YouTube script in under 5 minutes"
 ---
 
-## Get started in three steps
+<Info>
+  **Prerequisites:** You'll need a Subscribr account. [Sign up for free](https://subscribr.ai/register) if you haven't already.
+</Info>
 
-Get your documentation site running locally and make your first customization.
+## Welcome to Subscribr
 
-### Step 1: Set up your local environment
+This guide will walk you through creating your first YouTube script using Subscribr's revolutionary **Vibe Scripting** technology. In just a few minutes, you'll have a professional script ready for production.
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+## Step 1: Create Your First Channel
 
-### Step 2: Deploy your changes
+Channels are workspaces in Subscribr where you organize your content, define your voice, and manage your scripts.
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+<Steps>
+  <Step title="Navigate to Channels">
+    Click on **Channels** in the left sidebar of your dashboard
+  </Step>
+  <Step title="Click Create Channel">
+    Select **"Create New Channel"** button
+  </Step>
+  <Step title="Choose Channel Type">
+    - **Link YouTube Channel**: Connect an existing YouTube channel to import data and personalize AI
+    - **Create Custom Channel**: Start fresh without linking to YouTube (perfect for planning)
+  </Step>
+  <Step title="Configure Basic Settings">
+    - Enter your channel name
+    - Select your primary content category
+    - Choose your target audience demographic
+  </Step>
+</Steps>
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+<Tip>
+  Linking your YouTube channel allows Subscribr to analyze your existing content and create a personalized AI that matches your style perfectly.
+</Tip>
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+## Step 2: Start Script Bot
 
-### Step 3: Go live
+Script Bot is your AI collaborator that transforms conversations into viral-ready scripts.
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+<Steps>
+  <Step title="Open Script Bot">
+    Click the **"New Script"** button or navigate to **Script Bot** from the sidebar
+  </Step>
+  <Step title="Select Your Channel">
+    Choose the channel you just created from the dropdown
+  </Step>
+  <Step title="Choose Your Mode">
+    - **Chat Mode**: For brainstorming and ideation
+    - **Canvas Mode**: For real-time script editing (recommended for quick starts)
+  </Step>
+</Steps>
 
-## Next steps
+## Step 3: Create Your First Script
 
-Now that you have your docs running, explore these key features:
+Let's create a script using the revolutionary Vibe Scripting approach.
 
-<CardGroup cols={2}>
+### Method 1: Natural Conversation (Recommended)
 
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
+<CodeGroup>
+  ```text Example Conversation
+  You: "I want to make a video about the top 5 productivity apps for students"
 
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
+  Script Bot: "Great topic! Let me ask a few questions to make this perfect:
+  1. What's your target video length? (5-10 minutes?)
+  2. Are you targeting high school or college students?
+  3. Do you want a casual or more professional tone?"
 
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
+  You: "10 minutes, college students, casual but informative"
 
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
+  Script Bot: "Perfect! I'll create an engaging script that speaks directly to college students..."
+  ```
+</CodeGroup>
 
-</CardGroup>
+### Method 2: Quick Template
+
+If you prefer structure, use a template:
+
+<Tabs>
+  <Tab title="Educational">
+    ```text
+    "Create a 10-minute educational video about [TOPIC]
+    Target audience: [DEMOGRAPHIC]
+    Tone: Informative but engaging
+    Include: Introduction, 3-5 main points, conclusion with CTA"
+    ```
+  </Tab>
+  <Tab title="Review">
+    ```text
+    "Create a product review for [PRODUCT]
+    Length: 8-10 minutes
+    Include: Unboxing, features, pros/cons, verdict
+    Tone: Honest and conversational"
+    ```
+  </Tab>
+  <Tab title="Tutorial">
+    ```text
+    "Create a how-to tutorial for [SKILL/TASK]
+    Include: What viewers will learn, step-by-step process, common mistakes
+    Length: 10-15 minutes"
+    ```
+  </Tab>
+</Tabs>
+
+## Step 4: Watch Your Script Come to Life
+
+Once you provide your initial idea, Script Bot will:
+
+1. **Generate an outline** based on proven YouTube formulas
+2. **Write your complete script** section by section
+3. **Apply your channel voice** to maintain consistency
+4. **Optimize for engagement** with hooks and retention tactics
 
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  The script appears in real-time in Canvas mode. You can edit any section by clicking on it or asking Script Bot to revise specific parts.
 </Note>
+
+## Step 5: Refine and Perfect
+
+### Real-Time Editing
+- Click any paragraph to edit directly
+- Ask Script Bot to revise specific sections
+- Request tone adjustments or length changes
+
+### Common Refinement Commands
+
+<AccordionGroup>
+  <Accordion title="Make it more engaging">
+    "Make the introduction hook stronger"
+  </Accordion>
+  <Accordion title="Adjust the tone">
+    "Make this section more conversational and less formal"
+  </Accordion>
+  <Accordion title="Add examples">
+    "Add a real-world example to illustrate this point"
+  </Accordion>
+  <Accordion title="Improve transitions">
+    "Smooth out the transition between these two sections"
+  </Accordion>
+</AccordionGroup>
+
+## Step 6: Export Your Script
+
+Once you're satisfied with your script:
+
+<Steps>
+  <Step title="Click Export">
+    Find the **Export** button in the top right corner
+  </Step>
+  <Step title="Choose Format">
+    - **Word Document** (.docx) - For editing in Microsoft Word
+    - **Google Docs** - Direct export to your Google Drive
+    - **Plain Text** (.txt) - For simple text editors
+    - **Teleprompter** - Formatted for teleprompter apps
+    - **PDF** - For sharing and printing
+  </Step>
+  <Step title="Download or Share">
+    Download to your device or share directly with team members
+  </Step>
+</Steps>
+
+## What's Next?
+
+Now that you've created your first script, explore these powerful features:
+
+<CardGroup cols={2}>
+  <Card
+    title="Intel: Competitive Analysis"
+    icon="magnifying-glass-chart"
+    href="/intel/overview"
+  >
+    Discover what's working in your niche before you create
+  </Card>
+  <Card
+    title="Voice Profiles"
+    icon="microphone"
+    href="/script-creation/voice-profiles"
+  >
+    Train AI to write in your exact style
+  </Card>
+  <Card
+    title="Team Collaboration"
+    icon="users"
+    href="/team/overview"
+  >
+    Invite team members and collaborate in real-time
+  </Card>
+</CardGroup>
+
+## Pro Tips for New Users
+
+<Info>
+  **Power User Tip**: Use Intel to analyze top-performing videos in your niche before creating scripts. This data-driven approach increases your chances of creating viral content.
+</Info>
+
+### Speed Tips
+- Start with Chat mode for brainstorming, then switch to Canvas for editing
+- Use voice commands if you have a clear vision
+- Let Script Bot ask questions - they help create better content
+
+### Quality Tips
+- Always specify your target audience clearly
+- Provide examples of videos you admire
+- Use the research sidebar to add factual information
+- Review and personalize AI suggestions
+
+## Common Questions
+
+<AccordionGroup>
+  <Accordion title="How many scripts can I create?">
+    Your script limit depends on your subscription plan. Check your dashboard for remaining credits.
+  </Accordion>
+  <Accordion title="Can I edit scripts after saving?">
+    Yes! All scripts are automatically saved and can be edited anytime. Version history keeps track of all changes.
+  </Accordion>
+  <Accordion title="Can multiple people work on the same script?">
+    Yes! Canvas mode supports real-time collaboration. Team members can edit simultaneously.
+  </Accordion>
+  <Accordion title="How does Script Bot learn my voice?">
+    Script Bot analyzes your channel settings, previous scripts, and any YouTube videos you've linked to understand your unique style.
+  </Accordion>
+</AccordionGroup>
+
+## Need Help?
+
+If you run into any issues:
+
+<CardGroup cols={3}>
+  <Card
+    title="Documentation"
+    icon="book"
+    href="/script-creation/script-bot"
+  >
+    Detailed guides for every feature
+  </Card>
+  <Card
+    title="Support"
+    icon="headset"
+    href="mailto:hello@subscribr.ai"
+  >
+    Email our support team
+  </Card>
+  <Card
+    title="Community"
+    icon="discord"
+    href="https://community.subscribr.ai"
+  >
+    Get help from other creators
+  </Card>
+</CardGroup>
+
+---
+
+**Ready to create amazing content?** [Open Script Bot](https://subscribr.ai/chat) and start your next viral script!
